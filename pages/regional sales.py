@@ -1,11 +1,6 @@
 import streamlit as st
 import altair as alt
-import matplotlib
-matplotlib.use( 'tkagg' )
-import matplotlib.pyplot as plt
-import plotly.graph_objects as go
 import plotly.express as px
-from plotly.subplots import make_subplots
 import pandas as pd
 
 st.header("Region sales of the Superstore")
