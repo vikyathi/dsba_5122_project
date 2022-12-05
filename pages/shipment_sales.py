@@ -6,6 +6,7 @@ df = pd.read_csv("Superstore.csv", encoding='cp1252')
 df['Order Date'] = pd.to_datetime(df["Order Date"], format='%m/%d/%Y')
 df['OrderYear']=df['Order Date'].dt.year
 
+st.header("Total sales based on Ship Mode")
 shipment_sales = df.groupby(['Ship Mode', 'OrderYear'])['Sales'].sum().reset_index(name='sales')
 
 chart = alt.Chart(shipment_sales).mark_line().encode(
